@@ -1,0 +1,123 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  background: linear-gradient(135deg, #aee9ff 0%, #6ec6ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(30, 144, 255, 0.18);
+  padding: 48px 32px 40px 32px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  transition: box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #1976d2;
+  font-size: 2.2em;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+
+#date {
+  color: #1565c0;
+  font-size: 1.15em;
+  margin-bottom: 22px;
+  font-weight: 600;
+}
+
+#meal-info {
+  font-size: 1.25em;
+  color: #222;
+  background: #e3f2fd;
+  border-radius: 12px;
+  padding: 18px 10px;
+  min-height: 48px;
+  box-shadow: 0 2px 8px rgba(30, 144, 255, 0.07);
+  font-weight: 500;
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+  word-break: keep-all;
+}
+
+#school-name {
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  color: #1976d2;
+  font-weight: 700;
+}
+
+.emoji-trail {
+  position: fixed;
+  pointer-events: none;
+  font-size: 2rem;
+  z-index: 9999;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0.85;
+  transition: opacity 0.7s, transform 0.7s;
+}
+
+@media (max-width: 600px) {
+  body {
+    align-items: flex-start;
+    padding: 0 0 32px 0;
+  }
+  .container {
+    padding: 24px 4vw 18px 4vw;
+    max-width: 98vw;
+    margin: 24px auto 0 auto;
+  }
+  h1 {
+    font-size: 1.3em;
+  }
+  #meal-info {
+    font-size: 1em;
+    padding: 12px 4px;
+  }
+  #school-name {
+    font-size: 1em;
+  }
+  .emoji-trail {
+    font-size: 1.5rem;
+  }
+}
+
+.glow {
+  position: fixed;
+  pointer-events: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, #90caf9 60%, rgba(144,202,249,0.1) 100%);
+  box-shadow: 0 0 24px 8px #90caf9, 0 0 60px 20px #fff;
+  opacity: 0.7;
+  transform: translate(-50%, -50%) scale(1);
+  animation: glow-fade 0.7s forwards;
+  z-index: 9999;
+}
+
+@keyframes glow-fade {
+  0% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  80% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+}
